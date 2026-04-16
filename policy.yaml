@@ -1,0 +1,26 @@
+version: "1.0"
+policy_name: "Corporate Travel & Expense Policy"
+
+expense_categories:
+  meals:
+    daily_limit: 75.00
+    currency: "USD"
+    receipt_required: true
+    prohibited_items: ["alcohol", "tobacco"]
+  
+  transport:
+    max_class: "economy"
+    receipt_required: true
+    approved_vendors: ["Uber", "Lyft", "Yellow Cab"]
+
+  lodging:
+    nightly_limit: 250.00
+    require_itemized_receipt: true
+
+  office_supplies:
+    limit_per_event: 50.00
+    approval_required_above: 20.00
+
+general_rules:
+  receipt_deadline_days: 30
+  duplicate_rejection: true
